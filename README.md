@@ -27,5 +27,32 @@ Basics of writing modular, maintainable JavaScript using popular formats, loader
   * Pure JS that works in modern browsers and doesn't required 3rd party libraries
   * Comes in two popular flavors
     - Singleton
+        var scoreboard = function() {
+      
+        // private variables
+      
+        // functions
+        function someFunction() {
+      
+        }
+      
+        return {
+		  someFunction: someFunction      
+        }
+        }();
     - Constructor Function
-    
+      - Use the constructor naming convention and capitalize the name of the variable
+      - Don't immediately execute.
+      - New up as necessary.	
+    	var Scoreboard = function() {
+        // private variables
+      
+        // functions
+        function someFunction() {
+      
+        }
+      
+        return {
+		  someFunction: someFunction      
+        }
+        };
