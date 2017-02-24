@@ -1,8 +1,6 @@
-// Immediately-invoked function expression
+define(['./player', './game'], function (player, game) {
 
-(function() {
-
-    console.log('Starting MultiMath with an IIFE');
+    console.log('Loading with RequireJS');
 
     // add click handler to the start game button
     document.getElementById('startGame').addEventListener('click', function() {
@@ -18,4 +16,4 @@
     // set the default number of problems
     document.getElementById('problemCount').value = game.getProblemCount();
 
-})();
+});

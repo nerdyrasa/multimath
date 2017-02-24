@@ -1,4 +1,6 @@
-var scoreboard = function() {
+define([], function () {
+
+    console.log('Creating a scoreboard...');
 
     // private members
     var results = []; // array to store result of every game
@@ -30,4 +32,4 @@ var scoreboard = function() {
         updateScoreboard: updateScoreboard
     }
 
-}();
+});

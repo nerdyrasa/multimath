@@ -1,6 +1,8 @@
-// Revealing Module Pattern -- Singleton
+// Using AMD Format with RequireJS
 
-var player = function() {
+define([], function() {
+
+    console.log('Creating a player...');
 
     // private members
     var playerName = '';
@@ -23,4 +25,4 @@ var player = function() {
         getName: getName
     };
 
-}();
+});

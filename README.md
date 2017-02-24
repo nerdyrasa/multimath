@@ -30,16 +30,16 @@ Basics of writing modular, maintainable JavaScript using popular formats, loader
         ```javascript
         var scoreboard = function() {
       
-        // private variables
+          // private variables
       
-        // functions
-        function someFunction() {
+          // functions
+          function someFunction() {
       
-        }
+          }
       
-        return {
-		  someFunction: someFunction      
-        }
+          return {
+		    someFunction: someFunction      
+          }
         }();
         ```
     - Constructor Function
@@ -48,15 +48,50 @@ Basics of writing modular, maintainable JavaScript using popular formats, loader
       - New up as necessary.	
     	```javascript
     	var Scoreboard = function() {
-        // private variables
+          // private variables
       
-        // functions
-        function someFunction() {
+          // functions
+          function someFunction() {
       
-        }
+          }
       
-        return {
-		  someFunction: someFunction      
-        }
+          return {
+		    someFunction: someFunction      
+          }
         };
 		```
+		
+## Module Formats and Loaders
+
+### Overview
+  - Module formats
+    * Native vs. non-native
+    * Asynchronous Module Definition (AMD)
+    * CommonJS
+  - Module loaders
+    * Load AMD modules with RequireJS (you can also use Curl.js and SystemJS)
+    * Load CommonJS modules with SystemJS
+
+### Formats Versus Loaders
+  - Module Format -> Syntax
+  - Module Loader -> Execute
+  
+### Module Formats
+  - AMD -> browser
+  - CommonJS -> node
+  - UMD -> both browser and node
+  - System.register -> SystemJS
+  - The formats above are "non-native"
+  - ES2015 -> Native format; Requires transpilation
+  
+### Module Loaders
+  - RequireJS (AMD)
+  
+### Syntax for AMD Format
+  
+  ```
+  // game.js
+  define(['./player'], function(player) {
+  
+  });
+  ```
