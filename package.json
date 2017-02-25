@@ -13,6 +13,7 @@
     "http-server": "^0.9.0"
   },
   "dependencies": {
-    "requirejs": "^2.3.3"
+    "requirejs": "^2.3.3",
+    "systemjs": "^0.20.9"
   }
 }

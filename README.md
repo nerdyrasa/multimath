@@ -92,6 +92,37 @@ Basics of writing modular, maintainable JavaScript using popular formats, loader
   ```
   // game.js
   define(['./player'], function(player) {
+	
+	// The API that exposes functions is in the return
+	return {
+        logPlayer: logPlayer,
+        setName: setName,
+        getName: getName
+    };
   
   });
   ```
+  
+### CommonJS Format
+  ```
+  // game.js
+  var player = require('./player.js');
+ 
+#### Export Syntax  
+  
+  exports.printGame = printGame;
+  ```
+  
+  module.exports === exports
+  
+  exports.calculateScore = calculateScore;
+  
+  same as:
+  
+  module.exports.calculateScore = calculateScore;
+  
+### Summary of AMD modules with RequireJS vs. CommonJS modules with SystemJS
+
+ * AMD modules with RequireJS are more typically used in browser
+ * CommonJS modules with SystemJS are more typically used on the server (Node)
+  
